@@ -9,10 +9,11 @@ body
 	font-family: 'Open Sans', sans-serif
 	font-weight 300
 	color #000
+	font-size 20px
 	background #f7f7f7
 	position relative
 	max-width 1920px
-	min-width 1280px
+	min-width 1270px
 	padding 0
 	margin 0
 	clearfix()
@@ -25,3 +26,120 @@ img
 .wrap
 	width 1250px
 	margin 0 auto
+.nav-line
+	background #479eaf
+	.wrap
+		nav
+			ul
+				display block
+				margin 0
+				padding 0
+				clearfix()
+				li
+					display block
+					list-style-type none
+					transition 0.2s
+					float left
+					&.active
+						background #ffef2b
+						a
+							color #000
+					a
+						font-size 18px
+						color #f7f7f7
+						font-weight 700
+						padding 16px 49px
+						display block
+						transition 0.2s
+						&:hover
+							color #000
+header
+	background #fff
+	.wrap
+		padding 10px 0 23px 0
+		clearfix()
+		.logo
+			float left
+			margin-right 50px
+		.search-panel
+			padding-top 85px
+			float left
+			.search-line
+				position relative
+				&:after
+				input:not([type="submit"])
+					display block
+					width 334px
+					height 33.3px
+					border-radius 3px
+					background-color #f6f6f6
+					box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.5)
+					border solid 1px #d9d9d9
+					padding 0 30px 0 10px
+				input[type="submit"]
+					display block
+					position absolute
+					width 18.5px
+					height 18.5px
+					position absolute
+					top 7px
+					right 10px
+					background url("../images/magnifier.svg") no-repeat center
+					border 0
+					text-indent -99999px
+					outline none
+					cursor pointer
+			.search-example
+				font-size 14px
+				a
+					font-weight 700
+					color #479eaf
+					text-decoration underline
+					margin-left 5px
+					&:hover
+						text-decoration none
+		.top-contacts
+			float left
+			clearfix()
+			padding-top 82px
+			a
+				font-size 18px
+				font-weight 300
+				color #000
+				border-bottom 1px dashed #000
+				&:hover
+					border-bottom 0
+			.adress
+				float left
+				position relative
+				margin 0 30px
+				&:before
+					display block
+					content url("../images/pin.svg")
+					margin 0 auto
+					line-height 10px
+					text-align center
+			.phone
+				padding-top 5px
+				float left
+				font-size 25.6px
+				font-weight 400
+				line-height 28px
+		.cart
+			float left			
+			width 51px
+			height 49px
+			position relative
+			margin 85px 0 0 20px
+			background url("../images/cart.svg") no-repeat center
+			.cart-sum
+				position absolute
+				top -8px
+				right -35px
+				background #ffef2b
+				font-size 11px
+				white-space nowrap
+				font-weight 600
+				color #0b0b0b
+				padding 5px 10px
+				border-radius 20px

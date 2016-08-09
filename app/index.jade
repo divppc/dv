@@ -4,5 +4,39 @@ head
 	meta(charset="UTF-8")
 	link(rel="stylesheet", href="css/style.css")
 	title Склад ДВ | Главная
-body Привет мир
-	
+body
+	.nav-line
+		.wrap
+			nav
+				ul
+					li
+						a(href="#") Каталог
+					li
+						a(href="#") Партнерам
+					li
+						a(href="#") О нас
+					li.active
+						a(href="#") Скидки и акции
+					li
+						a(href="#") Оплата и доставка
+					li
+						a(href="#") Контакты
+	header
+		.wrap
+			.logo
+				a(href="/")
+					img(src="images/logo.svg", alt="Склад ДВ")
+			.search-panel
+				.search-line
+					input(type="text" placeholder="Поиск")
+					input(type="submit")
+				.search-example Например,
+					a(href="#") метровые обои
+			.top-contacts
+				.adress
+					a(href="#") Адреса
+				.phone
+					div +7 (924) 304-77-30
+					a(href="#") Заказать звонок
+			.cart
+				.cart-sum 1200 р
