@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="34px" viewBox="0 0 23 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1920x1024" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="1920x1024---20160718_main" sketch:type="MSArtboardGroup" transform="translate(-1162.000000, -138.000000)" fill="#479EAF">
+            <g id="Header-Copy" sketch:type="MSLayerGroup" transform="translate(-16.000000, 57.000000)">
+                <g id="Адреса-+-pin" transform="translate(1159.000000, 81.000000)" sketch:type="MSShapeGroup">
+                    <g id="pin" transform="translate(19.073984, 0.229618)">
+                        <path d="M11.4221432,33.093018 L11.0060905,32.5895458 C10.9413712,32.5111909 4.50696605,24.6801417 1.08880729,16.6734885 C0.369280795,15.1391763 0,13.465937 0,11.7176769 C0,5.32202371 5.12370305,0.118365986 11.4215994,0.118365986 C17.7189518,0.118365986 22.842111,5.32202371 22.842111,11.7176769 C22.842111,13.4403744 22.4673916,15.1136137 21.7282862,16.6912712 C18.3182853,24.679586 11.9023714,32.5106352 11.8376521,32.5889901 L11.4221432,33.093018 Z M11.4210555,17.699327 C8.12254591,17.699327 5.43859786,14.9569038 5.43859786,11.5859739 C5.43859786,8.21559972 8.12254591,5.47317652 11.4210555,5.47317652 C14.7195651,5.47317652 17.4035132,8.21559972 17.4035132,11.5859739 C17.4035132,14.9569038 14.7195651,17.699327 11.4210555,17.699327 Z" id="Fill-1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
