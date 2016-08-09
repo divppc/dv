@@ -26,7 +26,7 @@ img
 .wrap
 	width 1250px
 	margin 0 auto
-.nav-line
+section.nav-line
 	background #479eaf
 	.wrap
 		nav
@@ -40,10 +40,34 @@ img
 					list-style-type none
 					transition 0.2s
 					float left
-					&.active
+					position relative
+					&:first-child
+						&:before
+							display block
+							content ""
+							position absolute
+							top 15px
+							left 0
+							width 1px
+							height 29px
+							background rgba(255, 255, 255, 0.34)
+					&:after
+						display block
+						content ""
+						position absolute
+						top 15px
+						right -1px
+						width 1px
+						height 29px
+						background rgba(255, 255, 255, 0.34)
+					&.active,
+					&:hover
 						background #ffef2b
 						a
 							color #000
+						&:before,
+						&:after
+							display none
 					a
 						font-size 18px
 						color #f7f7f7
@@ -130,6 +154,7 @@ header
 			width 51px
 			height 49px
 			position relative
+			cursor pointer
 			margin 85px 0 0 20px
 			background url("../images/cart.svg") no-repeat center
 			.cart-sum
@@ -143,3 +168,277 @@ header
 				color #0b0b0b
 				padding 5px 10px
 				border-radius 20px
+section.categories
+	background #ffef2b
+	ul
+		display block
+		padding 0
+		margin 0
+		clearfix()
+		li
+			display block
+			float left
+			width 25%
+			list-style-type none
+			transition 0.2s
+			text-align center
+			position relative
+			&:first-child
+				&:before
+					display block
+					content ""
+					position absolute
+					top 15px
+					left 0
+					width 1px
+					height 29px
+					background rgba(0, 0, 0, 0.17)
+			&:after
+				display block
+				content ""
+				position absolute
+				top 15px
+				right -1px
+				width 1px
+				height 29px
+				background rgba(0, 0, 0, 0.17)
+
+			&.active,
+			&:hover
+				background #479eaf
+				a
+					color #fff
+				&:before,
+				&:after
+					display none
+			a
+				font-size 18px
+				color #000
+				font-weight 700
+				padding 16px 49px
+				display block
+				transition 0.2s
+				&:hover
+					color #f7f7f7
+section.slider
+	width 100%
+	height 44.58vw	
+	.slider-item
+		position relative
+		width 100%
+		height 100%
+		img
+			position absolute
+			display block
+			top 0
+			left 0
+			z-index -1
+			width 100%
+			height 100%
+		.wrap
+			padding-top 15vw
+			text-align center
+			.slide-title
+				text-align center
+				margin 0 0 1vw 0
+				h1
+					text-transform uppercase
+					color #fff
+					display inline-block
+					font-size 58.6px
+					font-weight 700
+					padding 5px 10px
+					background #479eaf					
+			.more-btn
+				display inline-block
+				font-weight 300
+				font-size 36px
+				color #fff
+				cursor pointer
+				padding 1% 2%
+				border-radius 8px
+				border 3px solid #fff
+				transition 0.3s
+				&:hover
+					background #ffef2b
+					border 3px solid #479eaf
+					color #000
+section.hot
+	.wrap
+		padding 65px 0 73px 0
+		h2
+			text-transform uppercase
+			font-weight 300
+			font-size 36px
+		.hot-items
+			clearfix()
+			.hot-item
+				// -webkit-text-stroke 1px #979797
+				background #fff
+				width 296px
+				color #000
+				transition 0.2s
+				float left
+				&:not(:last-child)
+					margin-right 20px
+				&:hover
+					box-shadow 0px 2px 10px rgba(0,0,0,.3)
+				a
+					display block
+					img
+						display block
+						width 100%
+						margin-bottom 6px
+					.hot-title
+						font-size 25px
+						// -webkit-text-stroke 1px #979797
+						display block
+						color #000
+						padding-left 18px
+					.about-hot
+						padding-left 20px
+						margin 10px 0	
+						font-size 12px				
+					.new-price
+						font-size 27px
+						background #ffef2b
+						padding 2px 5px
+						display inline-block
+					.old-price
+						text-decoration line-through
+						font-size 18px
+						padding-left 20px
+						margin-bottom 10px
+						color #000
+section.about
+	background #fff
+	.wrap
+		padding 65px
+		h3
+			text-transform uppercase
+			margin 0
+			font-size 36px
+			font-weight 300
+		.txt-container
+			margin-top 45px
+			column-count 2
+			p
+				margin 10px 0
+				font-size 20px
+section.services
+	.wrap
+		padding 55px 0 25px 0
+		h5
+			text-transform uppercase
+			font-weight 300
+			margin 0
+			font-size 36px
+		.services-wrap
+			clearfix()
+			margin-top 45px
+			.service-item
+				width 296px
+				float left
+				background #fff
+				&:not(:last-child)
+					margin-right 20px
+				&:first-child
+					a
+						.service-photo
+							background url("../images/service-1-camera.svg") no-repeat center,
+							url("../images/service-1.jpg") no-repeat center / cover
+				&:nth-child(2)
+					a
+						.service-photo
+							background url("../images/service-2-calc.svg") no-repeat center,
+							url("../images/service-2.jpg") no-repeat center / cover
+				&:nth-child(3)
+					a
+						.service-photo
+							background url("../images/service-3-zakaz.svg") no-repeat center,
+							url("../images/service-3.jpg") no-repeat center / cover
+				&:nth-child(4)
+					a
+						.service-photo
+							background url("../images/service-4-addresses.svg") no-repeat center,
+							url("../images/service-4.jpg") no-repeat center / cover
+				a
+					display block
+					transition 0.3s
+					color #000
+					min-height 328px
+					padding-bottom 25px
+					&:hover
+						box-shadow 0px 2px 10px rgba(0,0,0, .3)
+					.service-photo
+						position relative
+						width 100%
+						height 202px
+					.service-title
+						padding 10px 16.5px
+						font-size 24.8px
+					.service-info
+						font-size 9.6px
+						padding 0 16.5px
+section.info
+	.wrap
+		padding 0 0 72px 0
+		.info-items
+			clearfix()
+			.info-item				
+				float left
+				width 296px
+				text-align center
+				&:not(:last-child)
+					margin-right 20px
+				&:first-child
+					background url("../images/service-4-letter.svg") no-repeat center 40%, #fff
+				&:nth-child(2)
+					background url("../images/service-6-faq.svg") no-repeat center 40%, #fff
+				&:nth-child(3)
+					background url("../images/service-7-inf.svg") no-repeat center 40%, #fff
+				&:nth-child(4)
+					background url("../images/service-8-news.svg") no-repeat center 40%, #fff
+				a
+					display block
+					transition 0.3s
+					padding 212px 0 28px 0
+					font-size 24.8px
+					color #000
+					&:hover
+						box-shadow 0px 2px 10px rgba(0,0,0, .3)
+footer
+	background #000
+	.wrap
+		padding 23px 0 14px 0
+		clearfix()
+		.social
+			float right
+			.social-links
+				clearfix()
+				margin-bottom 25px
+				a
+					display block
+					float left
+					transition 0.2s
+					&:hover
+						opacity .7
+					&:not(:last-child)
+						margin-right 24px
+			.created-by
+				font-size 14px
+				color #fff
+				a
+					color #83CEE0
+					margin-left 5px
+					&:hover						
+						text-decoration underline
+		p
+			font-size 18px
+			margin 0
+			color #fff
+			a
+				color #83CEE0
+				margin-left 5px
+			
+				
