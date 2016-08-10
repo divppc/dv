@@ -263,6 +263,39 @@ section.slider
 					background #ffef2b
 					border 3px solid #479eaf
 					color #000
+.item
+	background #fff
+	color #000
+	transition 0.2s
+	float left
+	&:hover
+		box-shadow 0px 2px 10px rgba(0,0,0,.3)
+	a
+		display block
+		img
+			display block
+			width 100%
+			margin-bottom 6px
+		.title
+			font-size 25px
+			display block
+			color #000
+			padding-left 18px
+		.about
+			padding-left 20px
+			margin 10px 0	
+			font-size 12px				
+		.new-price
+			font-size 27px
+			background #ffef2b
+			padding 2px 5px
+			display inline-block
+		.old-price
+			text-decoration line-through
+			font-size 18px
+			padding-left 20px
+			margin-bottom 10px
+			color #000
 section.hot
 	.wrap
 		padding 65px 0 73px 0
@@ -272,44 +305,11 @@ section.hot
 			font-size 36px
 		.hot-items
 			clearfix()
-			.hot-item
-				// -webkit-text-stroke 1px #979797
-				background #fff
-				width 296px
-				color #000
-				transition 0.2s
-				float left
+			.item
+				width 266px
 				&:not(:last-child)
 					margin-right 20px
-				&:hover
-					box-shadow 0px 2px 10px rgba(0,0,0,.3)
-				a
-					display block
-					img
-						display block
-						width 100%
-						margin-bottom 6px
-					.hot-title
-						font-size 25px
-						// -webkit-text-stroke 1px #979797
-						display block
-						color #000
-						padding-left 18px
-					.about-hot
-						padding-left 20px
-						margin 10px 0	
-						font-size 12px				
-					.new-price
-						font-size 27px
-						background #ffef2b
-						padding 2px 5px
-						display inline-block
-					.old-price
-						text-decoration line-through
-						font-size 18px
-						padding-left 20px
-						margin-bottom 10px
-						color #000
+				
 section.about
 	background #fff
 	.wrap
@@ -440,5 +440,276 @@ footer
 			a
 				color #83CEE0
 				margin-left 5px
-			
+section.breadcrumbs
+	.wrap
+		padding 30px 0
+		font-size 14px
+		a
+			color #479eaf
+			margin-right 15px
+			position relative
+			text-decoration underline
+			&:hover
+				text-decoration none
+			&:after
+				display block
+				content ""
+				position absolute
+				top 10px
+				left -9px
+				width 3px
+				height 1px
+				background #479eaf
+section.catalog
+	.wrap
+		clearfix()
+		padding 0 0 20px 0
+		aside
+			float left
+			width 295px
+			margin-right 25px
+			.aside-item
+				padding 14px 18px
+				background #fff
+				margin-bottom 38px
+				.aside-item-title
+					font-size 27px
+					margin-bottom 3.5px
+			.type
+				ul
+					&.inner-list
+						display block
+						padding 0
+						li
+							list-style-type none
+							a
+								font-size 14px
+								color #000
+								padding-left 37px
+								&.active
+									color #479eaf
+									font-weight 700
+									
+					&:not(.inner-list)
+						display block
+						margin 0
+						padding 0
+						&>li
+							list-style-type none
+							&>a
+								font-weight 700
+								font-size 14px
+								color #000
+								padding 5px 0 5px 24px
+								transition 0.3s
+								display block
+								&.active,
+								&:hover
+									background #f6f6f6
+			.price
+				.range-inputs
+					clearfix()
+					margin-top 22.5px
+					label
+						font-size 14px
+					input
+						width 60px
+						border-radius 3px
+						height 36px
+						background-color #f6f6f6
+						box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.5)
+						border solid 1px #d9d9d9
+						font-weight 700
+						padding 0 10px
+					.price-from
+						float left
+					.price-to
+						float right
+			.color
+				.colors-wrap
+					clearfix()
+					padding-left 5px
+					margin-top 25px
+					.color-item
+						float left
+						margin-bottom 22px
+						&:not(:nth-child(4n+4))
+							margin-right 14px
+						&:first-child
+							label
+								&:after
+									background #fff
+						&:nth-child(2)
+							label
+								&:after
+									background #ff0000
+						&:nth-child(3)
+							label
+								&:after
+									background #ff8000
+						&:nth-child(4)
+							label
+								&:after
+									background #ffef2b
+						&:nth-child(5)
+							label
+								&:after
+									background #00812f
+						&:nth-child(6)
+							label
+								&:after
+									background #61d5cd
+						&:nth-child(7)
+							label
+								&:after
+									background #00d4ff
+						&:nth-child(8)
+							label
+								&:after
+									background #466dcb
+						&:nth-child(9)
+							label
+								&:after
+									background #9a50cf
+						&:nth-child(10)
+							label
+								&:after
+									background #ffa9cc
+						&:nth-child(11)
+							label
+								&:after
+									background #315567
+						&:nth-child(12)
+							label
+								&:after
+									background #ccd5cc
+
+						input
+							display none
+							&:checked
+								&+label
+									background #000
+						label
+							width 53px
+							height 53px
+							position relative
+							display block
+							border-radius 50%
+							background #fafafa
+							&:after
+								display block
+								position absolute
+								top 6px
+								left 6px
+								content ""
+								width 39px
+								cursor pointer
+								height 39px
+								border-radius 50%
+								border solid 1px #fff
+		.catalog-wrap
+			width 930px
+			float left
+			.top-line
+				clearfix()
+				.catalog-title
+					float left
+					h1
+						margin 0
+						font-size 36px
+						font-weight 300
+			.filters
+				margin 6px 0 13px 0
+				clearfix()
+				a
+					display block
+					float left
+					font-size 12px
+					color #000
+					border-bottom 1px dashed
+					&:first-child
+						margin-right 30px
+					&:hover
+						border-bottom 0
+					&.active
+						font-weight 700
+						color #479eaf
+						border-bottom 0
+			.items
+				clearfix()
+				.item
+					width 295px
+					margin-bottom 22px
+					&:not(:nth-child(3n+3))
+						margin-right 22px
+			.bottom-line
+				clearfix()
+.pagination
+	padding 15px 0px 10px 0px
+	float right
+	.page
+		width 25px
+		height 25px
+		border-radius 50%
+		float left
+		text-align center
+		line-height 20px
+		margin-right 13px
+		&.active
+			background #fff
+		a
+			font-size 14px
+			font-weight 700
+			padding 5px
+			color #000
+	.next
+		width 0
+		height 0
+		float left
+		cursor pointer
+		margin-top 5px
+		border-top 7px solid transparent
+		border-left 10px solid #479eaf
+		border-bottom 7px solid transparent
+section.seen
+	background #fff
+	.wrap
+		padding 36px 0
+		h2
+			font-size 36px
+			font-weight 300
+			text-transform uppercase
+			margin-bottom 36px
+		.seen-items
+			clearfix()
+			.item
+				a
+					img
+						margin 0
+			.seen-item
+				position relative
+				width 395.5px
+				float left
+				margin-bottom 31px
+				&:not(:nth-child(3n+3))
+					margin-right 31px
+				img
+					display block
+					width 100%
+				.price
+					font-size 36px
+					padding 0px 23px
+					background #ffef2b
+					z-index 1
+					position absolute
+					left 0
+					bottom 45px
+				.old-price
+					font-size 24px
+					text-decoration line-through
+					padding 0px 26px
+					background #fff
+					position absolute
+					left 0
+					bottom 12px	
 				
