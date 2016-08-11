@@ -703,7 +703,7 @@ section.seen
 					z-index 1
 					position absolute
 					left 0
-					bottom 45px
+					bottom 55px
 				.old-price
 					font-size 24px
 					text-decoration line-through
@@ -711,5 +711,166 @@ section.seen
 					background #fff
 					position absolute
 					left 0
-					bottom 12px	
-				
+					bottom 12px
+section.card
+	margin-bottom 30px
+	.wrap
+		h1
+			font-size 36px
+			margin 16px 0
+			text-transform uppercase
+			font-weight 300
+		.card-wrap
+			clearfix()
+			.product-slider
+				width 487px
+				float left
+				ul
+					display block
+					margin 0
+					padding 0
+					li
+						list-style-type none
+						display block
+						img
+							display block
+				.slider-thumbs
+					background #fff
+					padding 22px 17px 25px 17px
+			.about-product
+				float left
+				width 763px
+				.main-field
+					background #fff
+					padding 56px 0 28px 150px
+					clearfix()
+					.prices
+						float left
+						margin-right 50px
+						.new-price
+							font-size 36px
+						.old-price
+							text-decoration line-through
+							font-size 24px
+					.count
+						float left
+						margin-right 25px
+						input
+							display block
+							width 88px
+							height 60px
+							background-color #f6f6f6
+							box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.5)
+							border solid 1px #d9d9d9
+							font-size 20px
+							padding-left 10px
+						a
+							font-weight 700
+							font-size 11px
+							color #479eaf
+							text-decoration underline
+							&:hover
+								text-decoration none
+					.bye-btn
+						float left
+						a
+							width 165px
+							height 60px
+							text-align center
+							line-height 60px
+							font-weight 700
+							cursor pointer
+							font-size 20px
+							display block
+							background #ffef2b
+							color #000
+							transition 0.2s
+							&:hover
+								background #f3e42e
+				.info-fields
+					width 100%
+					tr
+						&:nth-child(even)
+							background #fff
+						td
+							padding 13px 0
+							width 50%
+							&:first-child
+								font-size 14px
+								padding-left 150px
+								font-weight 700
+								width 40%
+							&:nth-child(2)
+								font-weight 300
+								font-size 14px
+section.room
+	background #fff
+	.wrap
+		padding 50px 0
+		.top-line
+			margin-bottom 18px
+			clearfix()
+			h2
+				font-weight 300
+				font-size 36px
+				text-transform uppercase
+				margin 0 0 0 27px
+				float left
+			.room-type
+				float right
+				select
+					width 133.6px
+					height 39px
+					border-radius 3px
+					background-color #f6f6f6
+					box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.5)
+					border solid 1px #d9d9d9
+					font-size 14px
+					font-weight bold
+					padding-left 14px
+		.virtual
+			width 100%
+			min-height 834px
+section.recommended
+	background #fff
+	.wrap
+		padding-bottom 22px
+		h3
+			margin 0
+			font-size 36px
+			font-weight 300
+		.recommended-items
+			clearfix()
+			margin-top 28px
+			.item
+				margin-bottom 40px
+				&:not(:nth-child(6n+6))
+					margin-right 41px
+				a
+					border solid 1px #d8d8d8
+					position relative
+					width 174px
+					height 174px
+					color #000
+					img
+						max-width 80%
+						position absolute
+						top 50%
+						left 50%
+						display block
+						transform translate(-50%,-50%)
+					&>.old-price
+						position absolute
+						bottom 0
+						right 0
+						margin 0
+						text-decoration line-through
+						font-size 14px
+						padding-right 15px
+					&>.new-price
+						padding 0px 13px
+						font-size 20px
+						background #ffef2b
+						position absolute
+						right 0
+						bottom 19px

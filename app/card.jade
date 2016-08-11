@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+html(lang="ru-en")
+head
+	meta(charset="UTF-8")
+	link(rel="stylesheet", href="css/style.css")
+	title Склад ДВ | Карточка товара
+body
+	section.nav-line
+		.wrap
+			nav
+				ul
+					li
+						a(href="#") Каталог
+					li
+						a(href="#") Партнерам
+					li
+						a(href="#") О нас
+					li.active
+						a(href="#") Скидки и акции
+					li
+						a(href="#") Оплата и доставка
+					li
+						a(href="#") Контакты
+	header
+		.wrap
+			.logo
+				a(href="/")
+					img(src="images/logo.svg", alt="Склад ДВ")
+			.search-panel
+				.search-line
+					input(type="text" placeholder="Поиск")
+					input(type="submit")
+				.search-example Например,
+					a(href="#") метровые обои
+			.top-contacts
+				.adress
+					a(href="#") Адреса
+				.phone
+					div +7 (924) 304-77-30
+					a(href="#") Заказать звонок
+			.cart
+				.cart-sum 1200 р
+	section.categories
+		.wrap
+			ul
+				li
+					a(href="#") Обои
+				li
+					a(href="#") Свет
+				li
+					a(href="#") Декор
+				li
+					a(href="#") Товары для ремонта
+	section.breadcrumbs
+		.wrap
+			a(href="#").nav-link Главная
+			a(href="#").nav-link Каталог
+			a(href="#").nav-link Обои
+			span Komar (Германия)
+	section.card
+		.wrap
+			h1 Komar 8-961 Light Blue
+			.card-wrap
+				.product-slider
+					ul
+						li
+							img(src="images/big.jpg", alt="")
+					.slider-thumbs
+				.about-product
+					.main-field
+						.prices
+							.new-price 2600Р
+							.old-price 3290Р
+						.count
+							input(type="number" min="1")
+							a(href="#") Расчет рулонов
+						.bye-btn
+							a(href="#") Купить
+					table.info-fields(cellpadding="0" cellspacing="0")
+						tr
+							td Цвет
+							td Кремовый
+						tr
+							td Производитель
+							td Komar
+						tr
+							td Cтрана
+							td Германия
+						tr
+							td Материал
+							td Бумага
+						tr
+							td Стиль
+							td Фотообои
+						tr
+							td Размер рулона
+							td 1м x 2м
+						tr
+							td Фон
+							td Голубой
+	section.room
+		.wrap
+			.top-line
+				h2 Виртуальная комната
+				.room-type
+					select(name="room")
+						option(value="Кухня") Кухня
+						option(value="Кухня") Кухня
+						option(value="Кухня") Кухня
+			.virtual
+				img(src="images/virtual.jpg", alt="")
+	section.recommended
+		.wrap
+			h3 С этим товаром рекомендуем
+			.recommended-items
+				.item
+					a(href="#")
+						img(src="images/kleo.jpg", alt="")
+						.old-price 3290Р
+						.new-price 2600Р
+				.item
+					a(href="#")
+						img(src="images/2.jpg", alt="")
+						.old-price 3290Р
+						.new-price 2600Р
+				.item
+					a(href="#")
+						img(src="images/3.jpg", alt="")
+						.old-price 3290Р
+						.new-price 2600Р
+				.item
+					a(href="#")
+						img(src="images/4.jpg", alt="")
+						.old-price 3290Р
+						.new-price 2600Р
+				.item
+					a(href="#")
+						img(src="images/2.jpg", alt="")
+						.old-price 3290Р
+						.new-price 2600Р
+				.item
+					a(href="#")
+						img(src="images/3.jpg", alt="")
+						.old-price 3290Р
+						.new-price 2600Р
+	section.hot
+		.wrap
+			h2 ГОРЯЧИЕ ПРЕДЛОЖЕНИЯ
+			.hot-items
+				.item
+					a(href="#")
+						img(src="images/hot-1.jpg", alt="Komar 8-961 Light Blue")
+						.title
+							div Komar
+							div 8-961 Light Blue
+						.about Бумага, 368х254 см, Германия
+						.new-price 2600Р
+						.old-price 3290Р
+				.item
+					a(href="#")
+						img(src="images/hot-2.jpg", alt="Komar 8-961 Light Blue")
+						.title
+							div Komar
+							div 8-961 Light Blue
+						.about Бумага, 368х254 см, Германия
+						.new-price 2600Р
+						.old-price 3290Р
+				.item
+					a(href="#")
+						img(src="images/hot-3.jpg", alt="Komar 8-961 Light Blue")
+						.title
+							div Komar
+							div 8-961 Light Blue
+						.about Бумага, 368х254 см, Германия
+						.new-price 2600Р
+						.old-price 3290Р
+				.item
+					a(href="#")
+						img(src="images/hot-4.jpg", alt="Komar 8-961 Light Blue")
+						.title
+							div Komar
+							div 8-961 Light Blue
+						.about Бумага, 368х254 см, Германия
+						.new-price 2600Р
+						.old-price 3290Р
+	section.seen
+		.wrap
+			h2 Вы смотрели
+			.seen-items
+				.seen-item.item
+					a(href="#")
+						img(src="images/seen-1.jpg", alt="")
+						.price 2600Р
+						.old-price 3290Р
+				.seen-item.item
+					a(href="#")
+						img(src="images/seen-2.jpg", alt="")
+						.price 2600Р
+						.old-price 3290Р
+				.seen-item.item
+					a(href="#")
+						img(src="images/seen-3.jpg", alt="")
+						.price 2600Р
+						.old-price 3290Р
+	section.services
+		.wrap
+			h5 Сервисы
+			.services-wrap
+				.service-item
+					a(href="#")
+						.service-photo
+						.service-title Интерактивная комната
+						.service-info Посмотрите, как будут выглядеть выбранные вами обои
+				.service-item
+					a(href="#")
+						.service-photo
+						.service-title Калькулятор расчета рулонов
+						.service-info Посчитайте, сколько рулонов вам понадобится
+				.service-item
+					a(href="#")
+						.service-photo
+						.service-title Товар "под заказ"
+						.service-info Закажите то, что не нашли на сайте
+				.service-item
+					a(href="#")
+						.service-photo
+						.service-title Наши магазины
+						.service-info Купите нужный товар в нашем розничном магазине
+	section.info
+		.wrap
+			.info-items
+				.info-item
+					a(href="#") Письмо директору
+				.info-item
+					a(href="#") Вопросы и ответы
+				.info-item
+					a(href="#") Полезная информация
+				.info-item
+					a(href="#") Новости
+	footer
+		.wrap
+			.social
+				.social-links
+					a(href="#")
+						img(src="images/VK.svg", alt="")
+					a(href="#")
+						img(src="images/Facebook.svg", alt="")
+					a(href="#")
+						img(src="images/Instagram.svg", alt="")
+				.created-by Developed by
+					a(href="#") OneDesign.Pro
+			p.
+				© 1998-2016, СКЛАД-ДВ - Обои, обойный клей, краски, кисти, валики, светильники, карнизы, шторы, зеркала, картины
+			p.
+				Россия, г. Хабаровск: Обои Дисконт Центр, Обои Центр, Обои Маркет, Обои+Свет, Славянские Обои
+			p.
+				Россия, г. Комсомольск-на-Амуре: Новый Тон, Обои+Свет, Обои Центр
+			p   +7 (924) 304-77-30   |  94-44-90  |
+				a(href="mailto:info@sklad-dv.ru") info@sklad-dv.ru
+
