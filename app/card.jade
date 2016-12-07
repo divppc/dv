@@ -2,6 +2,9 @@
 html(lang="ru-en")
 head
 	meta(charset="UTF-8")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css")
+	link(rel="stylesheet", href="css/jquery.bxslider.css")
+	link(rel="stylesheet", href="css/nouislider.css")
 	link(rel="stylesheet", href="css/style.css")
 	title Склад ДВ | Карточка товара
 body
@@ -62,17 +65,25 @@ body
 			h1 Komar 8-961 Light Blue
 			.card-wrap
 				.product-slider
-					ul
+					ul.bxslider
 						li
 							img(src="images/big.jpg", alt="")
-					.slider-thumbs
+						li
+							img(src="images/big1.jpg", alt="")
+						li
+							img(src="images/big2.jpg", alt="")
+					//- .slider-thumbs
 				.about-product
 					.main-field
 						.prices
 							.new-price 2600Р
 							.old-price 3290Р
 						.count
-							input(type="number" min="1")
+							.input-wrap
+								.count-buttons
+									.more +
+									.less -
+								input(type="text" value="1")
 							a(href="#") Расчет рулонов
 						.bye-btn
 							a(href="#") Купить
@@ -98,15 +109,24 @@ body
 						tr
 							td Фон
 							td Голубой
+					.bye-info
+						.payment-type
+							img(src="images/cash.svg", alt="")
+							img(src="images/paycard.svg", alt="")
+							div Оплата наличными <br>или банковской картой
+						.delivery-type
+							img(src="images/delivery.svg", alt="")
+							div Доставка <br>по Хабаровску
 	section.room
 		.wrap
 			.top-line
 				h2 Виртуальная комната
 				.room-type
-					select(name="room")
-						option(value="Кухня") Кухня
-						option(value="Кухня") Кухня
-						option(value="Кухня") Кухня
+					.select
+						select(name="room")
+							option(value="Кухня") Кухня
+							option(value="Кухня") Кухня
+							option(value="Кухня") Кухня
 			.virtual
 				img(src="images/virtual.jpg", alt="")
 	section.recommended
@@ -257,4 +277,95 @@ body
 				Россия, г. Комсомольск-на-Амуре: Новый Тон, Обои+Свет, Обои Центр
 			p   +7 (924) 304-77-30   |  94-44-90  |
 				a(href="mailto:info@sklad-dv.ru") info@sklad-dv.ru
+	//- script(src="js/jquery-3.0.0.min.js")
+	.popup-bg
+	.calc.popup
+		.close-popup
+		.title Калькулятор рулонов и клея
+		.calc-item
+			.line
+				.field
+					.field-title Ширина рулона
+					.field-input
+						input(type="text" placeholder="53")
+						span см
+				.field
+					.field-title Длина рулона
+					.field-input
+						input(type="text" placeholder="10.0")
+						span м
+			.line
+				.field
+					.field-title Ширина нахлеста
+					.field-input
+						input(type="text" placeholder="10")
+						span мм
+				.field
+					.field-title Цена рулона
+					.field-input
+						input(type="text" placeholder="2600")
+						span руб.
+		.wall
+			.wall-line
+				.title Стена 1
+			.calc-item
+				.line
+					.field
+						.field-title Ширина стены
+						.field-input
+							input(type="text" placeholder="300")
+							span см
+					.field
+						.field-title Высота стены
+						.field-input
+							input(type="text" placeholder="270")
+							span cм
+				.line
+					.field
+						.field-title Дверь/окно, ширина
+						.field-input
+							input(type="text" placeholder="90")
+							span cм
+					.field
+						.field-title Дверь/окно, высота
+						.field-input
+							input(type="text" placeholder="180")
+							span см
+		.wall
+			.wall-line
+				.title Стена 2
+				.delete-wall
+					a(href="#") Удалить стену
+			.calc-item
+				.line
+					.field
+						.field-title Ширина стены
+						.field-input
+							input(type="text" placeholder="300")
+							span см
+					.field
+						.field-title Высота стены
+						.field-input
+							input(type="text" placeholder="270")
+							span cм
+				.line
+					.field
+						.field-title Дверь/окно, ширина
+						.field-input
+							input(type="text" placeholder="90")
+							span cм
+					.field
+						.field-title Дверь/окно, высота
+						.field-input
+							input(type="text" placeholder="180")
+							span см
+		.add-wall
+			a(href="#") + Добавить стену
+		.count
+			a(href="#") Рассчитать
+
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+	script(src="js/jquery.bxslider.js")
+	script(src="js/nouislider.js")
+	script(src="js/main.js")
 

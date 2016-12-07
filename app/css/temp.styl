@@ -95,9 +95,10 @@ header
 					display block
 					width 334px
 					height 33.3px
+					font-size 12.8px
 					border-radius 3px
 					background-color #f6f6f6
-					box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.5)
+					box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.3)
 					border solid 1px #d9d9d9
 					padding 0 30px 0 10px
 				input[type="submit"]
@@ -114,7 +115,8 @@ header
 					outline none
 					cursor pointer
 			.search-example
-				font-size 14px
+				font-size 12px
+				line-height 16px
 				a
 					font-weight 700
 					color #479eaf
@@ -147,15 +149,15 @@ header
 				padding-top 5px
 				float left
 				font-size 25.6px
-				font-weight 400
-				line-height 28px
+				font-weight 300
+				line-height 26px
 		.cart
 			float left			
 			width 51px
 			height 49px
 			position relative
 			cursor pointer
-			margin 85px 0 0 20px
+			margin 85px 0 0 48px
 			background url("../images/cart.svg") no-repeat center
 			.cart-sum
 				position absolute
@@ -222,47 +224,59 @@ section.categories
 					color #f7f7f7
 section.slider
 	width 100%
-	height 44.58vw	
-	.slider-item
-		position relative
-		width 100%
+	height 44.58vw
+	ul
+		padding 0
+		margin 0
 		height 100%
-		img
-			position absolute
+		display block	
+		.slider-item
+			list-style-type none
+			padding 0
 			display block
-			top 0
-			left 0
-			z-index -1
+			position relative
 			width 100%
 			height 100%
-		.wrap
-			padding-top 15vw
-			text-align center
-			.slide-title
+			img
+				position absolute
+				display block
+				top 0
+				left 0
+				z-index -1
+				width 100%
+				height 100%
+			.wrap
+				padding-top 15vw
 				text-align center
-				margin 0 0 1vw 0
-				h1
-					text-transform uppercase
-					color #fff
+				.slide-title
+					text-align center
+					margin 0 0 1vw 0
+					h1
+						text-transform uppercase
+						color #fff
+						display inline-block
+						font-size 58.6px
+						font-weight 700
+						padding 5px 10px
+						background #479eaf					
+				.more-btn
 					display inline-block
-					font-size 58.6px
-					font-weight 700
-					padding 5px 10px
-					background #479eaf					
-			.more-btn
-				display inline-block
-				font-weight 300
-				font-size 36px
-				color #fff
-				cursor pointer
-				padding 1% 2%
-				border-radius 8px
-				border 3px solid #fff
-				transition 0.3s
-				&:hover
-					background #ffef2b
-					border 3px solid #479eaf
-					color #000
+					font-weight 300
+					font-size 36px
+					color #fff
+					cursor pointer
+					text-align center
+					line-height 66px
+					letter-spacing 2px
+					width 290px
+					height 70px
+					border-radius 8px
+					border 3px solid #fff
+					transition 0.3s
+					&:hover
+						background #ffef2b
+						border 3px solid #479eaf
+						color #000
 .item
 	background #fff
 	color #000
@@ -272,6 +286,7 @@ section.slider
 		box-shadow 0px 2px 10px rgba(0,0,0,.3)
 	a
 		display block
+		color #000
 		img
 			display block
 			width 100%
@@ -283,7 +298,8 @@ section.slider
 			padding-left 18px
 		.about
 			padding-left 20px
-			margin 10px 0	
+			margin 10px 0
+				
 			font-size 12px				
 		.new-price
 			font-size 27px
@@ -306,14 +322,14 @@ section.hot
 		.hot-items
 			clearfix()
 			.item
-				width 266px
+				width 296px
 				&:not(:last-child)
-					margin-right 20px
+					margin-right 22px
 				
 section.about
 	background #fff
 	.wrap
-		padding 65px
+		padding 65px 0
 		h3
 			text-transform uppercase
 			margin 0
@@ -321,10 +337,16 @@ section.about
 			font-weight 300
 		.txt-container
 			margin-top 45px
-			column-count 2
-			p
-				margin 10px 0
-				font-size 20px
+			clearfix()
+			div
+				float left
+				width 592px
+				&:first-child
+					margin-right 65px
+				p
+					margin 10px 0
+					font-size 20px
+					line-height 34px
 section.services
 	.wrap
 		padding 55px 0 25px 0
@@ -341,7 +363,7 @@ section.services
 				float left
 				background #fff
 				&:not(:last-child)
-					margin-right 20px
+					margin-right 22px
 				&:first-child
 					a
 						.service-photo
@@ -390,7 +412,7 @@ section.info
 				width 296px
 				text-align center
 				&:not(:last-child)
-					margin-right 20px
+					margin-right 22px
 				&:first-child
 					background url("../images/service-4-letter.svg") no-repeat center 40%, #fff
 				&:nth-child(2)
@@ -440,6 +462,9 @@ footer
 			a
 				color #83CEE0
 				margin-left 5px
+				text-decoration underline
+				&:hover
+					text-decoration none
 section.breadcrumbs
 	.wrap
 		padding 30px 0
@@ -456,7 +481,7 @@ section.breadcrumbs
 				content ""
 				position absolute
 				top 10px
-				left -9px
+				right -8px
 				width 3px
 				height 1px
 				background #479eaf
@@ -480,6 +505,7 @@ section.catalog
 					&.inner-list
 						display block
 						padding 0
+						margin 0 0 12px 0
 						li
 							list-style-type none
 							a
@@ -492,7 +518,7 @@ section.catalog
 									
 					&:not(.inner-list)
 						display block
-						margin 0
+						margin 0 0 7px 0
 						padding 0
 						&>li
 							list-style-type none
@@ -520,7 +546,8 @@ section.catalog
 						box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.5)
 						border solid 1px #d9d9d9
 						font-weight 700
-						padding 0 10px
+						font-size 14px
+						padding 0 9px
 					.price-from
 						float left
 					.price-to
@@ -596,6 +623,7 @@ section.catalog
 							display block
 							border-radius 50%
 							background #fafafa
+							border solid 1px #f3f3f3
 							&:after
 								display block
 								position absolute
@@ -606,7 +634,6 @@ section.catalog
 								cursor pointer
 								height 39px
 								border-radius 50%
-								border solid 1px #fff
 		.catalog-wrap
 			width 930px
 			float left
@@ -630,7 +657,7 @@ section.catalog
 					&:first-child
 						margin-right 30px
 					&:hover
-						border-bottom 0
+						border-bottom 1px solid transparent
 					&.active
 						font-weight 700
 						color #479eaf
@@ -655,7 +682,9 @@ section.catalog
 		text-align center
 		line-height 20px
 		margin-right 13px
-		&.active
+		transition 0.3s
+		&.active,
+		&:hover
 			background #fff
 		a
 			font-size 14px
@@ -703,7 +732,7 @@ section.seen
 					z-index 1
 					position absolute
 					left 0
-					bottom 55px
+					bottom 49px
 				.old-price
 					font-size 24px
 					text-decoration line-through
@@ -742,7 +771,7 @@ section.card
 				width 763px
 				.main-field
 					background #fff
-					padding 56px 0 28px 150px
+					padding 55px 0 28px 150px
 					clearfix()
 					.prices
 						float left
@@ -755,15 +784,35 @@ section.card
 					.count
 						float left
 						margin-right 25px
-						input
-							display block
-							width 88px
-							height 60px
-							background-color #f6f6f6
-							box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.5)
-							border solid 1px #d9d9d9
-							font-size 20px
-							padding-left 10px
+						.input-wrap
+							position relative
+							input
+								display block
+								width 88px
+								height 60px
+								background-color #f6f6f6
+								box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.3)
+								border solid 1px #d9d9d9
+								font-size 20px
+								border-radius 3px
+								font-weight 700
+								padding-left 10px
+							.count-buttons
+								position absolute
+								right 3px
+								top 2px
+								text-align center
+								background #fff
+								width 24px
+								border solid 1px #d8d8d8
+								.less,
+								.more
+									font-size 20px
+									color #479eaf
+									cursor pointer
+									-webkit-user-select: none;
+									padding 2.3px 0									
+									font-weight 700									
 						a
 							font-weight 700
 							font-size 11px
@@ -782,6 +831,7 @@ section.card
 							cursor pointer
 							font-size 20px
 							display block
+							border-radius 3px
 							background #ffef2b
 							color #000
 							transition 0.2s
@@ -793,7 +843,7 @@ section.card
 						&:nth-child(even)
 							background #fff
 						td
-							padding 13px 0
+							padding 15px 0
 							width 50%
 							&:first-child
 								font-size 14px
@@ -803,6 +853,25 @@ section.card
 							&:nth-child(2)
 								font-weight 300
 								font-size 14px
+				.bye-info
+					padding 26px 0 17px 0
+					background #fff
+					clearfix()
+					&>div
+						float left
+						font-size 14px
+						color #000
+						text-align center
+						img
+							display block
+							margin 5px auto 10px
+					.payment-type
+						margin 0 150px
+						img
+							display inline-block
+							margin 0 0 3px 0
+							&:first-child
+								margin-right 10px
 section.room
 	background #fff
 	.wrap
@@ -818,16 +887,23 @@ section.room
 				float left
 			.room-type
 				float right
-				select
-					width 133.6px
-					height 39px
-					border-radius 3px
-					background-color #f6f6f6
-					box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.5)
-					border solid 1px #d9d9d9
-					font-size 14px
-					font-weight bold
-					padding-left 14px
+				.select
+					position relative
+					select
+						width 133.6px
+						height 38px
+						border-radius 3px
+						background-color #f6f6f6
+						box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.5)
+						border solid 1px #d9d9d9
+						font-size 14px
+						font-weight bold
+						padding-left 14px
+						-webkit-appearance none
+						-ms-appearance none
+						appearance none !important
+						text-indent 0.01px
+						background url("../images/select.svg") no-repeat right center / contain
 		.virtual
 			width 100%
 			min-height 834px
@@ -874,3 +950,121 @@ section.recommended
 						position absolute
 						right 0
 						bottom 19px
+.popup-bg
+	width 100%
+	height 100%
+	position fixed
+	top 0
+	left 0
+	z-index 100
+	display none
+	background rgba(0,0,0,.43)
+.popup
+	background #fff
+	z-index 101
+	left 50%
+	transform translateX(-50%)
+.calc
+	position absolute
+	display none
+	top 5%
+	min-width 677px
+	padding 25px 0
+	.close-popup
+		position absolute
+		width 29px
+		height 29px
+		right -50px
+		background url("../images/x.svg") no-repeat center
+		cursor pointer
+		top 5px
+	&>.title
+		font-size 36px
+		padding-left 45px
+		-webkit-text-stroke 1px #979797
+		margin-bottom 40px
+	.calc-item
+		padding 0 40px
+		.line
+			clearfix()
+			&:first-child
+				margin-bottom 10px
+			.field
+				float left
+				width 45%
+				clearfix()
+				&:first-child
+					margin-right 10%
+				.field-title
+					float left
+					font-weight 700
+					font-size 14px
+					padding-top 15px
+				.field-input
+					float right
+					input
+						width 59.5px
+						height 36px
+						border-radius 3px
+						background-color #f6f6f6
+						box-shadow inset 0 1px 3px 0 rgba(0, 0, 0, 0.5)
+						border solid 1px #d9d9d9
+						margin-right 10px
+						font-size 14px
+						font-weight 700
+						padding 0 7px
+						&::-webkit-input-placeholder {color:#000; opacity 1}
+					span
+						font-size 14px
+						display inline-block
+						min-width 26px
+	.wall-line
+		height 45px
+		line-height 45px
+		background #f7f7f7
+		margin 15px 0
+		clearfix()
+		.title
+			font-weight 700
+			font-size 14px
+			padding-left 45px
+			float left
+		.delete-wall
+			float right
+			padding-right 45px
+			a
+				color #479eaf
+				font-size 12px
+				font-weight 700
+				text-decoration underline
+				&:hover
+					text-decoration none
+	.add-wall
+		margin 28px 0 12px 0
+		padding-left 40px
+		a
+			font-size 20px
+			font-weight 700
+			color #479eaf
+			text-decoration underline
+			&:hover
+				text-decoration none
+	.count
+		text-align center
+		a
+			display inline-block
+			width 165px
+			height 60px
+			background #ffef2b
+			text-align center
+			border-radius 3px
+			line-height 60px
+			transition 0.3s
+			font-size 20px
+			color #000
+			font-weight 700
+			&:hover
+				background #ecdf3a
+#range
+	margin 20px 0 30px 0
+					

@@ -2,6 +2,15 @@
 html(lang="ru-en")
 head
 	meta(charset="UTF-8")
+	//- <!--[if IE]>
+	//- script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+	//- <![endif]-->
+	//- <!--[if IE]>
+	//- <script>document.createElement('header');document.createElement('nav');document.createElement('section');document.createElement('article');document.createElement('aside');document.createElement('main');document.createElement('footer');</script>
+	//- <![endif]-->
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css")
+	link(rel="stylesheet", href="css/jquery.bxslider.css")
+	link(rel="stylesheet", href="css/nouislider.css")
 	link(rel="stylesheet", href="css/style.css")
 	title Склад ДВ | Каталог
 body
@@ -91,6 +100,7 @@ body
 						.price-to
 							label(for="to") до
 							input(type="text" id="to")
+					#range
 				.aside-item.color
 					.aside-item-title Цвет
 					.colors-wrap
@@ -319,4 +329,8 @@ body
 				Россия, г. Комсомольск-на-Амуре: Новый Тон, Обои+Свет, Обои Центр
 			p   +7 (924) 304-77-30   |  94-44-90  |
 				a(href="mailto:info@sklad-dv.ru") info@sklad-dv.ru
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+	script(src="js/jquery.bxslider.js")
+	script(src="js/nouislider.js")
+	script(src="js/main.js")
 

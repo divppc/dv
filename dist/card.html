@@ -2,6 +2,9 @@
 <html lang="ru-en"></html>
 <head>
   <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"/>
+  <link rel="stylesheet" href="css/jquery.bxslider.css"/>
+  <link rel="stylesheet" href="css/nouislider.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <title>Склад ДВ | Карточка товара</title>
 </head>
@@ -59,10 +62,11 @@
       <h1>Komar 8-961 Light Blue</h1>
       <div class="card-wrap">
         <div class="product-slider">
-          <ul>
+          <ul class="bxslider">
             <li><img src="images/big.jpg" alt=""/></li>
+            <li><img src="images/big1.jpg" alt=""/></li>
+            <li><img src="images/big2.jpg" alt=""/></li>
           </ul>
-          <div class="slider-thumbs"></div>
         </div>
         <div class="about-product">
           <div class="main-field">
@@ -71,7 +75,13 @@
               <div class="old-price">3290Р</div>
             </div>
             <div class="count">
-              <input type="number" min="1"/><a href="#">Расчет рулонов</a>
+              <div class="input-wrap">
+                <div class="count-buttons">
+                  <div class="more">+</div>
+                  <div class="less">-</div>
+                </div>
+                <input type="text" value="1"/>
+              </div><a href="#">Расчет рулонов</a>
             </div>
             <div class="bye-btn"><a href="#">Купить</a></div>
           </div>
@@ -105,6 +115,14 @@
               <td>Голубой</td>
             </tr>
           </table>
+          <div class="bye-info">
+            <div class="payment-type"><img src="images/cash.svg" alt=""/><img src="images/paycard.svg" alt=""/>
+              <div>Оплата наличными <br>или банковской картой</div>
+            </div>
+            <div class="delivery-type"><img src="images/delivery.svg" alt=""/>
+              <div>Доставка <br>по Хабаровску</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -114,11 +132,13 @@
       <div class="top-line">
         <h2>Виртуальная комната</h2>
         <div class="room-type">
-          <select name="room">
-            <option value="Кухня">Кухня</option>
-            <option value="Кухня">Кухня</option>
-            <option value="Кухня">Кухня</option>
-          </select>
+          <div class="select">
+            <select name="room">
+              <option value="Кухня">Кухня</option>
+              <option value="Кухня">Кухня</option>
+              <option value="Кухня">Кухня</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="virtual"><img src="images/virtual.jpg" alt=""/></div>
@@ -249,4 +269,116 @@
       <p>  +7 (924) 304-77-30   |  94-44-90  |<a href="mailto:info@sklad-dv.ru">info@sklad-dv.ru</a></p>
     </div>
   </footer>
+  <div class="popup-bg"></div>
+  <div class="calc popup">
+    <div class="close-popup"></div>
+    <div class="title">Калькулятор рулонов и клея</div>
+    <div class="calc-item">
+      <div class="line">
+        <div class="field">
+          <div class="field-title">Ширина рулона</div>
+          <div class="field-input">
+            <input type="text" placeholder="53"/><span>см</span>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-title">Длина рулона</div>
+          <div class="field-input">
+            <input type="text" placeholder="10.0"/><span>м</span>
+          </div>
+        </div>
+      </div>
+      <div class="line">
+        <div class="field">
+          <div class="field-title">Ширина нахлеста</div>
+          <div class="field-input">
+            <input type="text" placeholder="10"/><span>мм</span>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-title">Цена рулона</div>
+          <div class="field-input">
+            <input type="text" placeholder="2600"/><span>руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wall">
+      <div class="wall-line">
+        <div class="title">Стена 1</div>
+      </div>
+      <div class="calc-item">
+        <div class="line">
+          <div class="field">
+            <div class="field-title">Ширина стены</div>
+            <div class="field-input">
+              <input type="text" placeholder="300"/><span>см</span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field-title">Высота стены</div>
+            <div class="field-input">
+              <input type="text" placeholder="270"/><span>cм</span>
+            </div>
+          </div>
+        </div>
+        <div class="line">
+          <div class="field">
+            <div class="field-title">Дверь/окно, ширина</div>
+            <div class="field-input">
+              <input type="text" placeholder="90"/><span>cм</span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field-title">Дверь/окно, высота</div>
+            <div class="field-input">
+              <input type="text" placeholder="180"/><span>см</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wall">
+      <div class="wall-line">
+        <div class="title">Стена 2</div>
+        <div class="delete-wall"><a href="#">Удалить стену</a></div>
+      </div>
+      <div class="calc-item">
+        <div class="line">
+          <div class="field">
+            <div class="field-title">Ширина стены</div>
+            <div class="field-input">
+              <input type="text" placeholder="300"/><span>см</span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field-title">Высота стены</div>
+            <div class="field-input">
+              <input type="text" placeholder="270"/><span>cм</span>
+            </div>
+          </div>
+        </div>
+        <div class="line">
+          <div class="field">
+            <div class="field-title">Дверь/окно, ширина</div>
+            <div class="field-input">
+              <input type="text" placeholder="90"/><span>cм</span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field-title">Дверь/окно, высота</div>
+            <div class="field-input">
+              <input type="text" placeholder="180"/><span>см</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="add-wall"><a href="#">+ Добавить стену</a></div>
+    <div class="count"><a href="#">Рассчитать</a></div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <script src="js/nouislider.js"></script>
+  <script src="js/main.js"></script>
 </body>
